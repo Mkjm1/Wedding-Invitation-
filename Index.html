@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دعوة زفاف مهدي & ضحى</title>
+    <title>دعوة زفاف مهدي وضحى</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #fcf8f2;
-            color: #4a4a4a;
+            color: #333;
             text-align: center;
             margin: 0;
             padding: 0;
         }
-        .container {
+        .screen {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -22,79 +22,67 @@
             padding: 20px;
             box-sizing: border-box;
         }
+        .white-bg {
+            background-color: #ffffff;
+            border-top: 2px solid #e2d1a3;
+        }
         h1 {
-            color: #d4af37;
-            font-size: 2.2rem;
+            color: #b8860b;
+            font-size: 32px;
             margin: 15px 0;
         }
+        h2 {
+            color: #b8860b;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
         p {
-            font-size: 1.2rem;
-            line-height: 1.6;
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 8px 0;
         }
-        .ring-box {
-            font-size: 80px;
+        .ring-btn {
+            font-size: 70px;
             cursor: pointer;
-            margin: 25px 0;
-            transition: transform 0.3s ease;
-            user-select: none;
+            margin: 20px 0;
+            border: none;
+            background: none;
+            outline: none;
         }
-        .ring-box:hover {
-            transform: scale(1.2);
-        }
-        .details-section {
-            min-height: 100vh;
-            padding: 50px 20px;
-            background-color: #ffffff;
-            border-top: 2px solid #f0e6d2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-        }
-        .btn-location {
+        .map-btn {
             display: inline-block;
             margin-top: 25px;
-            padding: 14px 28px;
-            background-color: #d4af37;
-            color: white;
+            padding: 12px 25px;
+            background-color: #b8860b;
+            color: #fff;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 25px;
+            font-size: 18px;
             font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
-            transition: background-color 0.3s ease;
-        }
-        .btn-location:hover {
-            background-color: #b89528;
         }
     </style>
 </head>
 <body>
 
-    <!-- الشاشة الأولى: الأسماء وصندوق الحلقة -->
-    <div class="container">
+    <div class="screen">
         <p>يتشرفان بدعوتكم لحضور حفل زفافهما</p>
         <h1>مهدي كريم & ضحى معد</h1>
         <p>اضغط على صندوق الحلقة لتفاصيل الحفل</p>
         
-        <!-- صندوق الحلقة -->
-        <div class="ring-box" onclick="scrollToDetails()">🎁💍</div>
+        <button class="ring-btn" onclick="openDetails()">💍</button>
     </div>
 
-    <!-- الشاشة الثانية: الوقت واللوكيشن -->
-    <div id="details" class="details-section">
+    <div id="details" class="screen white-bg">
         <h2>تفاصيل الحفل</h2>
         <p><strong>التاريخ:</strong> 1 / 1 / 2027</p>
         <p><strong>الوقت:</strong> الساعة 4:00 عصراً</p>
         <p><strong>المكان:</strong> قاعة زيونة للأعراس والمناسبات</p>
         
-        <!-- رابط موقع الخريطة -->
-        <a class="btn-location" href="https://maps.google.com/?cid=15106335666789968361&entry=gps&g_st=ac" target="_blank">📍 موقع الحفل على الخريطة</a>
+        <a class="map-btn" href="https://maps.google.com/?cid=15106335666789968361&entry=gps&g_st=ac" target="_blank">📍 موقع الحفل على الخريطة</a>
     </div>
 
     <script>
-        function scrollToDetails() {
+        function openDetails() {
             document.getElementById('details').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
