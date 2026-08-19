@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة زفاف مهدي & ضحى</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcf8f2;
+            color: #4a4a4a;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #d4af37;
+            font-size: 2.2rem;
+            margin: 15px 0;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .ring-box {
+            font-size: 80px;
+            cursor: pointer;
+            margin: 25px 0;
+            transition: transform 0.3s ease;
+            user-select: none;
+        }
+        .ring-box:hover {
+            transform: scale(1.2);
+        }
+        .details-section {
+            min-height: 100vh;
+            padding: 50px 20px;
+            background-color: #ffffff;
+            border-top: 2px solid #f0e6d2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .btn-location {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background-color: #d4af37;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+            transition: background-color 0.3s ease;
+        }
+        .btn-location:hover {
+            background-color: #b89528;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الشاشة الأولى: الأسماء وصندوق الحلقة -->
+    <div class="container">
+        <p>يتشرفان بدعوتكم لحضور حفل زفافهما</p>
+        <h1>مهدي كريم & ضحى معد</h1>
+        <p>اضغط على صندوق الحلقة لتفاصيل الحفل</p>
+        
+        <!-- صندوق الحلقة -->
+        <div class="ring-box" onclick="scrollToDetails()">🎁💍</div>
+    </div>
+
+    <!-- الشاشة الثانية: الوقت واللوكيشن -->
+    <div id="details" class="details-section">
+        <h2>تفاصيل الحفل</h2>
+        <p><strong>التاريخ:</strong> 1 / 1 / 2027</p>
+        <p><strong>الوقت:</strong> الساعة 4:00 عصراً</p>
+        <p><strong>المكان:</strong> قاعة زيونة للأعراس والمناسبات</p>
+        
+        <!-- رابط موقع الخريطة -->
+        <a class="btn-location" href="https://maps.google.com/?cid=15106335666789968361&entry=gps&g_st=ac" target="_blank">📍 موقع الحفل على الخريطة</a>
+    </div>
+
+    <script>
+        function scrollToDetails() {
+            document.getElementById('details').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
